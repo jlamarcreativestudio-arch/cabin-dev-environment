@@ -1,0 +1,19 @@
+{
+  "name": "Cabin Cloud Development Environment",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": "bash scripts/bootstrap.sh",
+  "containerEnv": {
+    "CABIN_DEV_ENVIRONMENT": "1"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.eol": "\\n"
+      }
+    }
+  }
+}

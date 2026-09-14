@@ -1,0 +1,50 @@
+{
+  "workspace": {
+    "root": "/workspace",
+    "taskCheckout": "/workspace/task",
+    "productionEstate": null
+  },
+  "bootstrap": {
+    "requiredCommands": [
+      "git",
+      "python3",
+      "node",
+      "rustc",
+      "uv",
+      "npm",
+      "pnpm"
+    ],
+    "optionalCommands": [
+      "docker",
+      "claude",
+      "codex",
+      "openclaw"
+    ],
+    "installByDefault": false
+  },
+  "snapshots": {
+    "include": [
+      "approved operating-system image",
+      "approved baseline toolchain",
+      "repository commit"
+    ],
+    "exclude": [
+      "secrets",
+      "ssh private keys",
+      "provider session state",
+      "unapproved task repositories",
+      "production estate data"
+    ]
+  },
+  "extensions": {
+    "mlx": {"enabled": false},
+    "qwen": {"enabled": false},
+    "llamaCpp": {"enabled": false},
+    "openclaw": {"enabled": false},
+    "claude": {"enabled": false},
+    "codex": {"enabled": false},
+    "mcp": {"enabled": false},
+    "router": {"enabled": false},
+    "orchestration": {"enabled": false}
+  }
+}

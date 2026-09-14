@@ -1,0 +1,37 @@
+name: Environment change
+description: Propose a change to the cloud environment contract
+title: "[Change]: "
+labels:
+  - "type: feature"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for toolchain, snapshot, CI, security, or extension changes. This repository is not the Cabin application.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - bootstrap
+        - snapshots
+        - CI
+        - security
+        - documentation
+        - extensions
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: Explain the problem and why this belongs in the canonical environment template.
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Boundary and evidence
+      description: State inputs, credentials, mutation, rollback, and how the change will be verified.
+    validations:
+      required: true
